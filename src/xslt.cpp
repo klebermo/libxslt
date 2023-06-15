@@ -17,3 +17,8 @@ std::string XSLT::transform(XML * xml) {
     //
     return resultString;
 }
+
+
+void XSLT::parseFile(std::string file_path) {
+    //
+}

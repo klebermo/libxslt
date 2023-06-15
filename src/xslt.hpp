@@ -15,6 +15,8 @@ public:
 
     void parse(std::string xslt);
     std::string transform(XML * xml);
+
+    void parseFile(std::string file_path);
 };
 
 #endif

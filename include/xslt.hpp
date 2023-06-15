@@ -1,21 +1,5 @@
 #include <xml.hpp>
 
-class ExprNode {
-    //
-};
-
-class ExprTree {
-    //
-};
-
-class SyntaxNode {
-    //
-};
-
-class SyntaxTree {
-    //
-};
-
 class XSLT {
 private:
     XML * xslt;
@@ -25,4 +9,6 @@ public:
 
     void parse(const char * xslt);
     std::string transform(XML * xml);
+
+    void parseFile(std::string file_path);
 };
