@@ -1,14 +1,6 @@
-export xml_header := /media/kleber/Disco/GitHub/libxml/include
-export xml_lib := /media/kleber/Disco/GitHub/libxml
-export xml_flags := -Wl,-rpath '/media/kleber/Disco/GitHub/libxml' ${xml_lib}/libxml.so
-
-export xpath_header := ../xpath/include
-export xpath_lib := ../xpath
-export xpath_flags := -Wl,-rpath '../xpath' ${xpath_lib}/libxpath.so
-
-export xquery_headers := ../xquery/include
-export xquery_lib := ../xquery
-export xquery_flags := -Wl,-rpath '../xquery' ${xquery_lib}/libxquery.so
+export xml_header := ../libxml/include
+export xml_lib := ../libxml
+export xml_flags := -Wl,-rpath '../libxml' ${xml_lib}/libxml.so
 
 export regex_header := ../regex/include
 export regex_lib := ../regex
@@ -21,7 +13,7 @@ export cpp_flags := -Wall -pedantic -fPIC -g -I ${xml_header}
 all: libxslt
 
 libxslt: syntaxNode.o syntaxTree.o exprNode.o exprTree.o xslt.o
-	$(cc) -shared -o libxslt.so syntaxNode.o syntaxTree.o exprNode.o exprTree.o xslt.o ${xml_flags} ${xpath_flags} ${xquery_flags}
+	$(cc) -shared -o libxslt.so syntaxNode.o syntaxTree.o exprNode.o exprTree.o xslt.o ${xml_flags} ${regex_flags}
 
 xslt.o: src/xslt.cpp
 	$(cc) $(cpp_flags) -c src/xslt.cpp -o xslt.o
