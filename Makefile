@@ -6,7 +6,6 @@ export regex_header := ../regex/include
 export regex_lib := ../regex
 export regex_flags := -Wl,-rpath '../regex' -Wl,-soname,regex.so  ${regex_lib}/regex.so
 
-
 export cc := g++
 export cpp_flags := -Wall -pedantic -fPIC -g -I ${xml_header}
 
