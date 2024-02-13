@@ -5,6 +5,7 @@ all: libxslt
 
 libxslt: tag.o xslt.o
 	$(cc) $(cpp_flags) -shared -o libxslt.so tag.o xslt.o
+	ar -rcs libxslt.a tag.o xslt.o
 
 tag.o: src/tag.cpp
 	$(cc) $(cpp_flags) -c src/tag.cpp
