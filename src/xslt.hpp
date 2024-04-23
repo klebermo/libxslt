@@ -1,9 +1,10 @@
 #ifndef xslt_hpp
 #define xslt_hpp
 
-class Xslt {
+#include "tag.hpp"
+
+class xslt {
     //
 };
-typedef Xslt xslt;
 
 #endif
