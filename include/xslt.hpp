@@ -1,6 +1,5 @@
 #include <xml.hpp>
 
-class Xslt {
+class xslt {
     //
 };
-typedef Xslt xslt;
