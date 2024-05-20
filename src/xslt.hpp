@@ -1,7 +1,7 @@
 #ifndef xslt_hpp
 #define xslt_hpp
 
-#include "tag.hpp"
+#include "element.hpp"
 
 class xslt {
     //
