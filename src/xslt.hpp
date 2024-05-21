@@ -3,7 +3,7 @@
 
 #include "element.hpp"
 
-class xslt {
+class Xslt {
     //
 };
 
