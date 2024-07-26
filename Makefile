@@ -1,10 +1,14 @@
+export xml_hpp := /home/kleber/Documentos/libxml/include
+export xml_lib := /home/kleber/Documentos/libxml -l:libxml.a
+
 export cc := g++
-export cpp_flags := -Wall -pedantic -fPIC -g
+export cppflags := -Wall -pedantic -g -I$(xml_hpp)
+export ldflags := -L$(xml_lib)
 
 all: libxslt
 
 libxslt: element.o xslt.o
-	$(cc) $(cpp_flags) -shared -o libxslt.so element.o xslt.o
+	$(cc) $(cpp_flags) -shared -o libxslt.so element.o xslt.o $(ldflags)
 	ar -rcs libxslt.a element.o xslt.o
 
 element.o: src/element.cpp
