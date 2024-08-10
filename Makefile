@@ -2,7 +2,7 @@ export xml_hpp := /home/kleber/Documentos/libxml/include
 export xml_lib := /home/kleber/Documentos/libxml -l:libxml.a
 
 export cc := g++
-export cppflags := -Wall -pedantic -g -I$(xml_hpp)
+export cppflags := -Wall -pedantic -I$(xml_hpp)
 export ldflags := -L$(xml_lib)
 
 all: libxslt
